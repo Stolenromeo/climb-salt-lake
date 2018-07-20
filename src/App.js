@@ -1,18 +1,27 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import Changes from './Components/ChangeReqs'
+import Button from './Components/Button'
+import Climbs from './Components/Climbs'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Climb Salt Lake</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className='mainSec'>
+          <div className='mainLeft'>
+            <Climbs />
+          </div>
+          <div className="mainRight">
+            <div className="rightTop">rightTop</div>
+            <div className="rightBottom">rightBottom</div>
+          </div>
+        </div>
+        
       </div>
     );
   }
