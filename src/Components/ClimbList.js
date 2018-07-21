@@ -1,23 +1,20 @@
-import React, {Component} from 'react'
+import React from 'react'
+import Button from './Button';
 
 
-export default class ClimbList extends Component {
-    
-    constructor(){
-        super()
-        this.state={
-            name:"",
-            location: "",
-            height: "",
-            difficulty: "",
-            types: "",
-            routes: 0,
-            changeReq: "none"
-        }
-    }
+export default function ClimbList (props){
     
 
-    render(){
-        return 
-    }
+    
+    //Render this.props.name this.props.location 
+    //also render button which onClick calls parent function to set activeId of climb
+return (
+<div>
+    <div   className="climb-list"> <div>{props.climb.name}</div>  <div>{props.climb.types}</div>
+    <Button id={props.climb.id} setID={props.button} />
+    </div>
+    <hr/>
+</div>
+)
+    
 }
